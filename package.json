@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "genesys-spark": "^4.142.0"
+  }
+}
