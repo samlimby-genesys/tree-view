@@ -1,5 +1,12 @@
 
+h2 {
+    margin: 0;
+}
 
+.header {
+    padding-top: 12px;
+    padding-bottom: 16px;
+}
 .canvas-container {
     display: flex;
     justify-content: center;
@@ -21,4 +28,23 @@ gux-selector-card-beta {
 .gux-selector-card .gux-content {
     inline-size: 240px;
 }
+
+.header {
+    display: flex;
+    width: 100%;
+    align-items: flex-start;
+}
+
+.left-aligned {
+    display: flex;
+    width: 100%;
+}
+
+.right-aligned {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    gap: 12px;
+}
+
 

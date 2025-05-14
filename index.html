@@ -14,7 +14,46 @@
     </script>
 </head>
 <body>
-    <div class="canvas-container">
+    <div class="header">
+        <div class="left-aligned">
+            <h2>Tree View Demo</h2>
+        </div>
+        <div class="right-aligned">
+            <gux-dropdown placeholder="Select type">
+                <gux-listbox aria-label="type">
+                    <gux-option value="a">Basic</gux-option>
+                    <gux-option value="b">Checkbox</gux-option>
+                </gux-listbox>
+            </gux-dropdown>
+            <gux-dropdown placeholder="Select alignment">
+                <gux-listbox aria-label="type">
+                    <gux-option value="a">Left-aligned</gux-option>
+                    <gux-option value="b">Right-aligned</gux-option>
+                </gux-listbox>
+            </gux-dropdown>
+            <gux-dropdown placeholder="Select variant">
+                <gux-listbox aria-label="type">
+                    <gux-option value="a">text-only</gux-option>
+                    <gux-option value="b">text & icon</gux-option>
+                </gux-listbox>
+            </gux-dropdown>
+            <gux-segmented-control-beta
+                value="comfy"
+                onchange="notify(event)"
+                oninput="notify(event)"
+            >
+                <gux-segmented-control-item value="comfy">
+                    <div slot="text">Comfy</div>
+                </gux-segmented-control-item>
+                <gux-segmented-control-item value="compact">
+                    <div slot="text">Compact</div>
+                </gux-segmented-control-item>
+            </gux-segmented-control-beta>
+        </div>
     </div>
+    <div class="canvas-container">
+
+    </div>
+    <script src="app.js"></script>
 </body>
 </html>
