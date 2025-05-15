@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=§, initial-scale=1.0">
-    <title>Combobox Component</title>
+    <title>Tree View Component Showcase</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script type="module">
         import { registerSparkComponents } from './node_modules/genesys-spark/dist/index.js';
 
@@ -19,22 +20,22 @@
             <h2>Tree View Demo</h2>
         </div>
         <div class="right-aligned">
-            <gux-dropdown placeholder="Select type">
+            <gux-dropdown value="a">
                 <gux-listbox aria-label="type">
                     <gux-option value="a">Basic</gux-option>
                     <gux-option value="b">Checkbox</gux-option>
                 </gux-listbox>
             </gux-dropdown>
-            <gux-dropdown placeholder="Select alignment">
+            <gux-dropdown value="a">
                 <gux-listbox aria-label="type">
                     <gux-option value="a">Left-aligned</gux-option>
                     <gux-option value="b">Right-aligned</gux-option>
                 </gux-listbox>
             </gux-dropdown>
-            <gux-dropdown placeholder="Select variant">
+            <gux-dropdown value="a">
                 <gux-listbox aria-label="type">
-                    <gux-option value="a">text-only</gux-option>
-                    <gux-option value="b">text & icon</gux-option>
+                    <gux-option value="a">Text-only</gux-option>
+                    <gux-option value="b">Text & icon</gux-option>
                 </gux-listbox>
             </gux-dropdown>
             <gux-segmented-control-beta
@@ -52,7 +53,167 @@
         </div>
     </div>
     <div class="canvas-container">
-
+        <ul id="basic-left-text_comfy">
+            <li><span class="parent-caret"><div class="parent-container"><i class="fa fa-caret-right"></i>Kerbol System</div></span>
+                <ul class="nested">
+                    <li class="child-leaf"><div class="child-sub_leaf">Moho</div></li>
+                    <li class="child-container"><div class="child-sub_container"><i class="fa fa-caret-right"></i>Eve</div></li>
+                        <ul class="nested">
+                            <li class="grandchild-leaf"><div class="child-sub_leaf">Gilly</div></li>
+                        </ul>
+                    </li>
+                    <li><span class="caret">Kerbin</span>
+                        <ul class="nested">
+                            <li>Mun</li>
+                            <li>Minmus</li>
+                        </ul>
+                    </li>
+                    <li><span class="caret">Duna</span>
+                        <ul class="nested">
+                            <li>Ike</li>
+                        </ul>
+                    </li>
+                    <li>Dres</li>
+                    <li><span class="caret">Jool</span>
+                        <ul class="nested">
+                            <li>Laythe</li>
+                            <li>Vall</li>
+                            <li>Tylo</li>
+                            <li>Bop</li>
+                            <li>Pol</li>
+                        </ul>
+                    </li>
+                    <li>Eeloo</li>
+                </ul>
+            </li>
+            <li><span class="parent-caret">English Counties & Cities</span>
+                <ul class="nested">
+                    <li><span class="caret">North East England</span>
+                        <ul class="nested">
+                            <li><span class="caret">Durham</span>
+                                <ul class="nested">
+                                    <li>Durham</li>
+                                </ul>
+                            </li>
+                            <li>Northumberland</li>
+                            <li>Tyne and Wear</li>
+                        </ul>
+                    </li>
+                    <li><span class="caret">North West England</span>
+                        <ul class="nested">
+                            <li><span class="caret">Cheshire</span>
+                                <ul class="nested">
+                                    <li>Chester</li>
+                                </ul>
+                            </li>
+                            <li>Cumbria</li>
+                            <li>Greater Manchester</li>
+                            <li>Lancashire</li>
+                            <li>Merseyside</li>
+                        </ul>
+                    </li>
+                    <li><span class="caret">Yorkshire and the Humber</span>
+                        <ul class="nested">
+                            <li><span class="caret">East Riding of Yorkshire</span>
+                                <ul class="nested">
+                                    <li>Hull</li>
+                                </ul>
+                            </li>
+                            <li>North Yorkshire</li>
+                            <li>South Yorkshire</li>
+                            <li>West Yorkshire</li>
+                        </ul>
+                    </li>
+                    <li><span class="caret">East Midlands</span>
+                        <ul class="nested">
+                            <li><span class="caret">Derbyshire</span>
+                                <ul class="nested">
+                                    <li>Derby</li>
+                                </ul>
+                            </li>
+                            <li>Leicestershire</li>
+                            <li>Lincolnshire</li>
+                            <li>Northamptonshire</li>
+                        </ul>
+                    </li>
+                    <li><span class="caret">West Midlands</span>
+                        <ul class="nested">
+                            <li><span class="caret">Herefordshire</span>
+                                <ul class="nested">
+                                    <li>Hereford</li>
+                                </ul>
+                            </li>
+                            <li>Shropshire</li>
+                            <li>Staffordshire</li>
+                            <li>Worcestershire</li>
+                        </ul>
+                    </li>
+                    <li><span class="caret">East of England</span>
+                        <ul class="nested">
+                            <li><span class="caret">Bedfordshire</span>
+                                <ul class="nested">
+                                    <li>Luton</li>
+                                </ul>
+                            </li>
+                            <li>Cambridgeshire</li>
+                            <li>Essex</li>
+                            <li>Hertfordshire</li>
+                            <li>Norfolk</li>
+                            <li>Suffolk</li>
+                        </ul>
+                    </li>
+                    <li>London</li>
+                    <li><span class="caret">South East England</span>
+                        <ul class="nested">
+                            <li><span class="caret">Berkshire</span>
+                                <ul class="nested">
+                                    <li>Reading</li>
+                                </ul>
+                            </li>
+                            <li>Buckinghamshire</li>
+                            <li>East Sussex</li>
+                            <li>Hampshire</li>
+                            <li>Isle of Wight</li>
+                            <li>Kent</li>
+                            <li>Oxfordshire</li>
+                            <li>Surrey</li>
+                            <li>West Sussex</li>
+                        </ul>
+                    </li>
+                    <li><span class="caret">South West England</span>
+                        <ul class="nested">
+                            <li><span class="caret">Cornwall</span>
+                                <ul class="nested">
+                                    <li>Newquay</li>
+                                </ul>
+                            </li>
+                            <li>Devon</li>
+                            <li>Bristol</li>
+                            <li>Dorest</li>
+                            <li>Gloustershire</li>
+                            <li>Somerset</li>
+                            <li>Wiltshire</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><span class="parent-caret">Cities of the British Isles</span>
+                <ul class="nested">
+                    <li>London</li>
+                    <li>Edinburgh</li>
+                    <li>Manchester</li>
+                    <li>Birmingham</li>
+                    <li>Leeds</li>
+                    <li>Portsmouth</li>
+                    <li>Plymouth</li>
+                    <li>Cardiff</li>
+                    <li>Dublin</li>
+                    <li>Belfast</li>
+                    <li>Newcastle</li>
+                    <li>Oxford</li>
+                </ul>
+            </li>
+        </ul>
     </div>
     <script src="app.js"></script>
 </body>

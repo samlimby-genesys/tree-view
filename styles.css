@@ -20,15 +20,6 @@ h2 {
     box-sizing: border-box;
 }
 
-gux-selector-card-beta {
-    --gux-content-width: 200px;
-}
-
-
-.gux-selector-card .gux-content {
-    inline-size: 240px;
-}
-
 .header {
     display: flex;
     width: 100%;
@@ -45,6 +36,174 @@ gux-selector-card-beta {
     justify-content: flex-end;
     width: 100%;
     gap: 12px;
+}
+
+/* Remove default bullets */
+ul, #myUL {
+    list-style-type: none;
+
+}
+  
+/* Remove margins and padding from the parent ul */
+#basic-left-text_comfy {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    gap: 12px;
+}
+
+/* Style the caret/arrow */
+.caret {
+    cursor: pointer;
+    user-select: none; /* Prevent text selection */
+}
+
+.parent-caret {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    user-select: none; /* Prevent text selection */
+    width: 268px;
+    padding-left: 8px;
+    align-items: flex-start;
+    flex-shrink: 0;
+    color: var(--foreground-container-high_emphasis, #2A2A2E);
+
+    /* semantic/body/md/regular */
+    font-family: var(--theme-font_family-body, "Noto Sans");
+    font-size: var(--font_size-sm, 14px);
+    font-style: normal;
+    font-weight: var(--font_weight-regular, 400);
+    line-height: var(--line_height-sm, 20px); /* 142.857% */
+}
+
+.parent-container {
+    display: flex;
+    height: 36px;
+    padding-left: 8px;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+    align-self: stretch;
+}
+
+.parent-container:hover {
+    border-radius: 4px;
+    background: var(--background-container-elevated-hover, #E7E9F9);
+}
+
+.child-container {
+    display: flex;
+    padding-left: 32px;
+    align-items: flex-start;
+}
+
+.child-sub_container {
+    display: flex;
+    padding: var(--container-xs-padding, 8px) 4px;
+    align-items: center;
+    gap: 8px;
+    flex: 1 0 0;
+
+    color: var(--foreground-container-high_emphasis, #2A2A2E);
+    font-family: var(--theme-font_family-body, "Noto Sans");
+    font-size: var(--font_size-sm, 14px);
+    font-style: normal;
+    font-weight: var(--font_weight-regular, 400);
+    line-height: var(--line_height-sm, 20px); /* 142.857% */
+}
+
+.child-sub_container:hover {
+    border-radius: 4px;
+    background: var(--background-container-elevated-hover, #E7E9F9);
+}
+
+.child-leaf {
+    display: flex;
+    padding-left: 32px;
+    align-items: flex-start;
+}
+
+.child-sub_leaf {
+    display: flex;
+    padding: var(--container-xs-padding, 8px) 4px;
+    align-items: center;
+    gap: 8px;
+    flex: 1 0 0;
+
+    color: var(--foreground-container-high_emphasis, #2A2A2E);
+    font-family: var(--theme-font_family-body, "Noto Sans");
+    font-size: var(--font_size-sm, 14px);
+    font-style: normal;
+    font-weight: var(--font_weight-regular, 400);
+    line-height: var(--line_height-sm, 20px); /* 142.857% */
+}
+
+.child-sub_leaf:hover {
+    border-radius: 4px;
+    background: var(--background-container-elevated-hover, #E7E9F9);
+}
+
+.grandchild-leaf {
+    display: flex;
+    padding-left: 56px;
+    align-items: flex-start;
+}
+
+.grandchild-sub_leaf {
+    display: flex;
+    padding: var(--container-xs-padding, 8px) 4px;
+    align-items: center;
+    gap: 8px;
+    flex: 1 0 0;
+
+    color: var(--foreground-container-high_emphasis, #2A2A2E);
+    font-family: var(--theme-font_family-body, "Noto Sans");
+    font-size: var(--font_size-sm, 14px);
+    font-style: normal;
+    font-weight: var(--font_weight-regular, 400);
+    line-height: var(--line_height-sm, 20px); /* 142.857% */
+}
+
+.grandchild-sub_leaf:hover {
+    border-radius: 4px;
+    background: var(--background-container-elevated-hover, #E7E9F9);
+}
+  
+/* Create the caret/arrow with a unicode, and style it */
+.caret::before {
+    content: "\25B6";
+    color: black;
+    display: inline-block;
+    margin-right: 4px;
+}
+
+/* .parent-caret::before {
+    content: "\25B6";
+    color: black;
+    display: inline-block;
+    margin-right: 4px;
+} */
+  
+/* Rotate the caret/arrow icon when clicked on (using JavaScript) */
+.caret-down::before {
+    transform: rotate(90deg);
+}
+
+.parent_caret-down::before {
+    transform: rotate(90deg);
+}
+  
+/* Hide the nested list */
+.nested {
+    display: none;
+    padding-inline-start: 0px;
+}
+  
+/* Show the nested list when the user clicks on the caret/arrow (with JavaScript) */
+.active {
+    display: block;
 }
 
 
