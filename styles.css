@@ -119,6 +119,11 @@ ul, #myUL {
     background: var(--background-container-elevated-hover, #E7E9F9);
 }
 
+.child-sub_container-selected {
+    border-radius: 4px;
+    background: var(--background-container-elevated-active_subtle, #D5DEF7);
+}
+
 .child-leaf {
     display: flex;
     padding-left: 32px;
@@ -128,9 +133,11 @@ ul, #myUL {
 .child-sub_leaf {
     display: flex;
     padding: var(--container-xs-padding, 8px) 4px;
-    align-items: center;
+    align-items: left;
+    padding-left: 28px;
     gap: 8px;
     flex: 1 0 0;
+    width: 100%;
 
     color: var(--foreground-container-high_emphasis, #2A2A2E);
     font-family: var(--theme-font_family-body, "Noto Sans");
@@ -138,6 +145,11 @@ ul, #myUL {
     font-style: normal;
     font-weight: var(--font_weight-regular, 400);
     line-height: var(--line_height-sm, 20px); /* 142.857% */
+}
+
+.child-sub_leaf-selected {
+    border-radius: 4px;
+    background: var(--background-container-elevated-active_subtle, #D5DEF7)
 }
 
 .child-sub_leaf:hover {
@@ -157,6 +169,7 @@ ul, #myUL {
     align-items: center;
     gap: 8px;
     flex: 1 0 0;
+    padding-left: 28px;
 
     color: var(--foreground-container-high_emphasis, #2A2A2E);
     font-family: var(--theme-font_family-body, "Noto Sans");
@@ -169,6 +182,11 @@ ul, #myUL {
 .grandchild-sub_leaf:hover {
     border-radius: 4px;
     background: var(--background-container-elevated-hover, #E7E9F9);
+}
+
+.grandchild-sub_leaf-selected {
+    border-radius: 4px;
+    background: var(--background-container-elevated-active_subtle, #D5DEF7)
 }
   
 /* Create the caret/arrow with a unicode, and style it */
